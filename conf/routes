@@ -13,4 +13,11 @@ GET     /message                    controllers.AsyncController.message
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
+
+# Chat Routes
+GET         /chat             controllers.ChatController.getChats
+GET         /chat/:name       controllers.ChatController.getChat(name:String)
+POST        /chat             controllers.ChatController.createChat
+DELETE      /chat/:name       controllers.ChatController.deleteChat(name:String)
+
       
